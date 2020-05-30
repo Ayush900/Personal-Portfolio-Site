@@ -126,3 +126,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+try :
+    from .local_settings import *
+except ImportError:
+    print("looks like there is no local file. you must be in pproduction")
