@@ -1,0 +1,61 @@
+body {
+  background-image: url('/media/portfolio/images/bg.jpg');
+}
+
+#oll{
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+h1
+{
+  font-family: 'Chelsea Market', cursive;
+  font-size: 100px;
+}
+h2
+{
+  font-family: 'Chelsea Market', cursive;
+  font-size: 80px;
+}
+
+#nav{
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+#one {
+  /* background-color: #ddd; */
+  /* border: none; */
+  color: black;
+  padding: 12px 28px;
+  text-align: center;
+  font-size: 16px;
+  /* margin: 4px 2px; */
+  transition: 0.3s;
+}
+
+#one:hover {
+  background-color: #3e8e41;
+  color: white;
+}
+
+#desc{
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 30px;
+  padding: 16px 32px;
+
+}
+#title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  padding: 16px 32px;
+}
+
+#col{
+  padding: 12px 28px;
+}

@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h1><b> The world's {{ blogs.count }} most powerful blog{{ blogs|pluralize }}  </b></h1>
+<p> <b> From Prince Harry in Afghanistan to Tom Cruise ranting about Scientology and footage from the Burmese uprising, blogging has never been bigger. It can help elect presidents and take down attorney generals while simultaneously celebrating the minutiae of our everyday obsessions. Here are the 50 best reasons to log on
+
+Read Bobbie Johnson's blog on celebrity snooper Nick Denton here.
+
+The following apology was published in the Observer's For the record column, Sunday March 16 2008.</b> </p>
+
+
+<p> The article below said 'Psychodwarf' was Beppe Grillo's nickname for 'Mario Mastella, leader of the Popular-UDEUR centre-right party', but it's actually his nickname for Silvio Berlusconi. Mastella's first name is Clemente and Popular-UDEUR was part of Romano Prodi's centre-left coalition. And Peter Rojas, not Ryan Block, founded Engadget and co-founded Gizmodo. Apologies. </p>
+
+<ul>
+  {% for blog in blogs %}
+  <li> <a href="{% url 'blog:detail' blog.id %}"> <h3><b>  {{ blog.title }}  </b></h3> </a>
+        <h5> {{ blog.date|date:'jS F Y' }} </h5>
+        <p> {{ blog.content|truncatechars:100 }} </p>
+        {% if blog.url %}
+        <h5> <b>Link to the website : </b><a href="{{ blog.url }}"> <b>{{ blog.url }}</b></a> </h5>
+        {% endif %}
+        <br>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

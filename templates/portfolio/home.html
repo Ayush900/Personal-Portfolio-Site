@@ -1,0 +1,49 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+      {% load static %}
+    <div id="centerc" class="text-center">
+      <h1> This is the portfolio app!! </h1>
+    </div>
+
+    <!-- <div class="text-left">
+      <a href="{% static 'portfolio/AyushMehrotra_Resume.pdf' %}" class="btn btn-primary" align ="left" > Resume </a>
+    </div>
+
+    <div class="text-right">
+      <a href="{% url 'blog:all_blogs' %}" class="btn btn-primary" align ="right" > Blogs </a>
+    </div> -->
+
+    <br>
+
+
+
+    <!-- <a href="{% static 'portfolio/AyushMehrotra_Resume.pdf' %}"> Resume </a> -->
+
+
+    <div class="text-center">
+      <img src="{% static 'portfolio/ayush.jpg' %}">
+      <br>
+      <br>
+      <div id="centerc" class="text-center">
+        <h2> Please check out some of the projects that I have recently worked on !!</h2>
+      </div>
+      <div class="row">
+
+      {% for project in projects %}
+      <div id = "col" class="col-lg-4 col-md-6">
+
+          <h2 id ="title"> {{ project.title }} </h2>
+          <p id = "desc"> {{ project.description }} </p>
+
+          <br>
+          {% if project.url %}
+          <a href="{{ project.url }}"> <img src="{{ project.image.url }}" height= 400 width = 400></a>
+          {% endif %}
+          <br>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}
