@@ -2,6 +2,15 @@ body {
   background-image: url('/media/portfolio/images/bg.jpg');
 }
 
+#but{
+  font-family: 'Tenali Ramakrishna', sans-serif;
+
+}
+
+h3{
+  font-size: 50px;
+
+}
 #oll{
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 500px;

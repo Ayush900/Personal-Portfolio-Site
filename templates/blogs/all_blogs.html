@@ -14,11 +14,13 @@ The following apology was published in the Observer's For the record column, Sun
 
 <ul>
   {% for blog in blogs %}
-  <li> <a href="{% url 'blog:detail' blog.id %}"> <h3><b>  {{ blog.title }}  </b></h3> </a>
+  <li> <h3 id ="jj"><b>  {{ blog.title }}  </b></h3>
         <h5> {{ blog.date|date:'jS F Y' }} </h5>
         <p> {{ blog.content|truncatechars:100 }} </p>
+        <a  href="{% url 'blog:detail' blog.id %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><h5 id ="but">Click for full Blog..</h5></a>
+        <br><br>
         {% if blog.url %}
-        <h5> <b>Link to the website : </b><a href="{{ blog.url }}"> <b>{{ blog.url }}</b></a> </h5>
+        <h5> <b>Link to the website : </b><a  href="{{ blog.url }}"> <b>{{ blog.url }}</b></a> </h5>
         {% endif %}
         <br>
   </li>
