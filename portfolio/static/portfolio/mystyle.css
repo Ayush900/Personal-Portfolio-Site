@@ -4,6 +4,7 @@ body {
 
 #but{
   font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size:  30px;
 
 }
 
@@ -19,11 +20,11 @@ h3{
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-h1
+/* h1
 {
   font-family: 'Chelsea Market', cursive;
   font-size: 100px;
-}
+} */
 h2
 {
   font-family: 'Chelsea Market', cursive;
@@ -33,7 +34,7 @@ h2
 #nav{
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
-list-style-type: none;
+list-style-typxpe: none;
 margin: 0;
 padding: 0;
 }
